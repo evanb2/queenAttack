@@ -1,6 +1,4 @@
-
-
-var queenAttack = function(queen, opponent) {
+function queenAttack(queen, opponent) {
   var q1 = queen[1];
   var q0 = queen[0];
   var opp1 = opponent[1];
@@ -18,3 +16,26 @@ var queenAttack = function(queen, opponent) {
     return false;
   }
 };
+
+$(document).ready(function() {
+  $("form#queen").submit(function(event){
+    var queen0 = parseInt($("input#queen0").val());
+    var queen1 = parseInt($("input#queen1").val());
+    var opp0 = parseInt($("input#opponent0").val());
+    var opp1 = parseInt($("input#opponent1").val());
+
+    var queen = [queen0, queen1];
+    var opponent = [opp0, opp1];
+
+    var result = queenAttack(queen, opponent);
+
+    $(".not").empty();
+
+    if (!result) {
+      $(".not").text("not");
+    }
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
