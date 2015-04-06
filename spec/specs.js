@@ -15,7 +15,7 @@ describe('queenAttack', function() {
     expect(queenAttack([2, 4], [1, 5])).to.equal(true);
   });
 
-  // it("is true if the coordinates subtract 1", function() {
-  //   expect(queenAttack([2, 4], [1, 3])).to.equal(true);
-  // });
+  it("is true if the coordinates difference is equal", function() {
+    expect(queenAttack([2, 4], [3, 5])).to.equal(true);
+  });
 });

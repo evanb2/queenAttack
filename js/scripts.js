@@ -9,10 +9,11 @@ var queenAttack = function(queen, opponent) {
   var queenSum = q0 + q1;
   var opponentSum = opp0 + opp1;
 
-  if ((queen[1] === opponent[1]) || (queen[0] === opponent[0]) || (queenSum === opponentSum)) {
+  var diff0 = q0 - opp0;
+  var diff1 = q1 - opp1;
+
+  if ((q1 === opp1) || (q0 === opp0) || (queenSum === opponentSum) || (diff0 === diff1)) {
     return true;
-  // } else if (){
-  //   return true;
   } else {
     return false;
   }
