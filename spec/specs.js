@@ -11,7 +11,11 @@ describe('queenAttack', function() {
     expect(queenAttack([1, 1], [1, 2])).to.equal(true);
   });
 
-  it("is true if the coordinates are diagonally in line", function() {
+  it("is true if the coordinates sum is equal", function() {
     expect(queenAttack([2, 4], [1, 5])).to.equal(true);
   });
+
+  // it("is true if the coordinates subtract 1", function() {
+  //   expect(queenAttack([2, 4], [1, 3])).to.equal(true);
+  // });
 });
