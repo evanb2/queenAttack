@@ -10,4 +10,8 @@ describe('queenAttack', function() {
   it("is true if the coordinates are vertically in line", function() {
     expect(queenAttack([1, 1], [1, 2])).to.equal(true);
   });
+
+  it("is true if the coordinates are diagonally in line", function() {
+    expect(queenAttack([2, 4], [1, 5])).to.equal(true);
+  });
 });
